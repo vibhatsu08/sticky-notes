@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bodyBgcolor: #F6E8EA;
+    --navbarBgColor: #22181C;
+    --navbarLogoTxtColor: #F6E8EA;
+    --navbarNewNoteTypeButtonBgColor: #312F2F;
+    --navbarNewNoteTypeButtonTxtColor: #F6E8EA;
+    --notesDivBgColor: #EEB4B3;
+    --notesHeaderBgColor: #312F2F;
+    --notesHeaderTxtColor: #EEB4B3;
+    --notesHeaderNewNoteButtonBgColor: #EF626C;
+    --notesHeaderNewNoteButtonTxtColor: #EEB4B3;
+    --noteBgColor: #EF626C;
+    --noteTxtColor: #312F2F;
+}
+
+body {
+    background-color: var(--bodyBgcolor);
+}
+
+#container {
+    max-width: 100%;
+    height: 100%;
+    overflow: none;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 20px;
+    background-color: var(--navbarBgColor);
+}
+#navbar-logo {
+    color: var(--navbarLogoTxtColor);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+#new-note-type-button {
+    border: none;
+    outline: none;
+    background-color: var(--navbarNewNoteTypeButtonBgColor);
+    color: var(--navbarNewNoteTypeButtonTxtColor);
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+}
+#new-note-type-button:hover {
+    background-color: var(--navbarNewNoteTypeButtonTxtColor);
+    color: var(--navbarNewNoteTypeButtonBgColor);
+}
+
+#notes-body {
+    padding: 10px;
+}
+.notes-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--notesDivBgColor);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+.notes-header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--notesHeaderBgColor);
+    padding: 10px;
+    border-radius: 10px;
+}
+.notes-header {
+    color: var(--notesHeaderTxtColor);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.notes {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+.note {
+    background-color: var(--noteBgColor);
+    color: var(--noteTxtColor);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 10vw;
+}
