@@ -16,7 +16,7 @@
     --notesHeaderBgColor: #312F2F;
     --notesHeaderTxtColor: #EEB4B3;
     --notesHeaderNewNoteButtonBgColor: #EF626C;
-    --notesHeaderNewNoteButtonTxtColor: #EEB4B3;
+    --notesHeaderNewNoteButtonTxtColor:  #312F2F;
     --noteBgColor: #EF626C;
     --noteTxtColor: #312F2F;
 }
@@ -36,6 +36,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    gap: 20px;
     padding: 10px 20px;
     background-color: var(--navbarBgColor);
 }
@@ -64,7 +65,12 @@ body {
 }
 
 #notes-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 10px;
+    gap: 20px;
 }
 .notes-div {
     display: flex;
@@ -93,10 +99,24 @@ body {
     font-weight: 500;
     text-transform: capitalize;
 }
+.new-note-button {
+    border: none;
+    outline: none;
+    background-color: var(--notesHeaderNewNoteButtonBgColor);
+    color: var(--notesHeaderNewNoteButtonTxtColor);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
 .notes {
     display: flex;
-    overflow-x: auto;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .note {
     background-color: var(--noteBgColor);
@@ -105,5 +125,12 @@ body {
     border-radius: 10px;
     font-size: 1.1rem;
     font-weight: 400;
-    width: 10vw;
+    min-width: 10vw;
+    min-height: 20vh;
+}
+.note:nth-child(odd) {
+    transform: rotate(5deg);
+}
+.note:nth-child(even) {
+    transform: rotate(-2deg);
 }
