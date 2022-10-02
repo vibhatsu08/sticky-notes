@@ -128,9 +128,6 @@ body {
     min-width: 10vw;
     min-height: 20vh;
 }
-.note:nth-child(odd) {
-    transform: rotate(5deg);
-}
-.note:nth-child(even) {
-    transform: rotate(-2deg);
+.note:hover {
+    transform: scale(1.1);
 }
