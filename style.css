@@ -19,6 +19,8 @@
     --notesHeaderNewNoteButtonTxtColor:  #312F2F;
     --noteBgColor: #EF626C;
     --noteTxtColor: #312F2F;
+    --noteButtonsBgColor: #312F2F;
+    --noteButtonsTxtColor: #EF626C;
 }
 
 body {
@@ -119,6 +121,10 @@ body {
     gap: 20px;
 }
 .note {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
     background-color: var(--noteBgColor);
     color: var(--noteTxtColor);
     padding: 10px;
@@ -127,7 +133,27 @@ body {
     font-weight: 400;
     min-width: 10vw;
     min-height: 20vh;
+    transition: 0.1s all ease-in-out;
 }
 .note:hover {
     transform: scale(1.1);
+}
+.note-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+.note-buttons > button {
+    border: none;
+    outline: none;
+    background-color: var(--noteButtonsBgColor);
+    color: var(--noteButtonsTxtColor);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
